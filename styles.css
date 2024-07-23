@@ -1,6 +1,78 @@
-/* ... (previous CSS remains the same) ... */
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Hero Section Updates */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('https://source.unsplash.com/random/1600x900/?technology') no-repeat center center/cover;
+    height: 100vh;
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    max-width: 600px;
+}
+
 .hero-description {
     max-width: 800px;
     margin: 30px auto 0;
@@ -13,6 +85,81 @@
 .hero-description p {
     font-size: 1.1rem;
     margin-bottom: 15px;
+}
+
+/* Solution Sections */
+.solution {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.solution h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+.solution ul {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.solution ul li {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.solution ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #3498db;
+    font-weight: bold;
+}
+
+/* Signup Section */
+.signup {
+    padding: 80px 0;
+    background-color: #ecf0f1;
+}
+
+.signup h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+#pilot-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#pilot-form input,
+#pilot-form select,
+#pilot-form button {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#pilot-form button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#pilot-form button:hover {
+    background-color: #2980b9;
 }
 
 /* Section Divider */
@@ -60,16 +207,30 @@
     margin-bottom: 15px;
 }
 
-/* Responsive Design Updates */
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .hero-description {
-        padding: 15px;
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
     }
 
     .hero-description p {
         font-size: 1rem;
     }
 
+    .solution h2,
+    .signup h2,
     .challenges h2 {
         font-size: 2rem;
     }
